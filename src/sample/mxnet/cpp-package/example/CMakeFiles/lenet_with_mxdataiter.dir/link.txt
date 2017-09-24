@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/lenet_with_mxdataiter.dir/lenet_with_mxdataiter.o  -o lenet_with_mxdataiter -rdynamic -lmxnet_static -ldmlc 

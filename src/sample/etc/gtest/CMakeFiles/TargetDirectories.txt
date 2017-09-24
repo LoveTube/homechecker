@@ -1,0 +1,3 @@
+/home/ubuntu/src/example/gtest/CMakeFiles/edit_cache.dir
+/home/ubuntu/src/example/gtest/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/src/example/gtest/CMakeFiles/runTests.dir

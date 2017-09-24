@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/mlp_gpu.dir/mlp_gpu.o  -o mlp_gpu -rdynamic -lmxnet_static -ldmlc 

@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/charRNN.dir/charRNN.o  -o charRNN -rdynamic -lmxnet_static -ldmlc 

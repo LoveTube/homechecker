@@ -1,0 +1,2 @@
+/home/ubuntu/mxnet/cpp-package/CMakeFiles/edit_cache.dir
+/home/ubuntu/mxnet/cpp-package/CMakeFiles/rebuild_cache.dir

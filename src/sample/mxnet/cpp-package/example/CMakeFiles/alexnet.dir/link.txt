@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/alexnet.dir/alexnet.o  -o alexnet -rdynamic -lmxnet_static -ldmlc 

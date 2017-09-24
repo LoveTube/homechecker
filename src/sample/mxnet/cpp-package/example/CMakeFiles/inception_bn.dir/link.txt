@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/inception_bn.dir/inception_bn.o  -o inception_bn -rdynamic -lmxnet_static -ldmlc 

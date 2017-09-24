@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/resnet.dir/resnet.o  -o resnet -rdynamic -lmxnet_static -ldmlc 

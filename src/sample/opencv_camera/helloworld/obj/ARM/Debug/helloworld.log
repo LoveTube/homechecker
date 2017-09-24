@@ -1,0 +1,11 @@
+﻿  Validating architecture
+  Validating sources
+  Copying sources remotely to '192.168.0.16'
+  Starting remote build
+  Compiling sources:
+  hello.cpp
+C:\Users\sjs21\source\repos\helloworld\helloworld\hello.cpp(25,7): warning : unused variable ‘b’ [-Wunused-variable]
+C:\Users\sjs21\source\repos\helloworld\helloworld\hello.cpp(7,12): warning : variable ‘frame’ set but not used [-Wunused-but-set-variable]
+C:\Users\sjs21\source\repos\helloworld\helloworld\hello.cpp(9,6): warning : variable ‘a’ set but not used [-Wunused-but-set-variable]
+  Linking objects
+  helloworld.vcxproj -> C:\Users\sjs21\source\repos\helloworld\helloworld\bin\ARM\Debug\helloworld.out

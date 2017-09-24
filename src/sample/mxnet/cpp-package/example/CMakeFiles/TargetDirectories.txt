@@ -1,0 +1,13 @@
+/home/ubuntu/mxnet/cpp-package/example/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/mxnet/cpp-package/example/CMakeFiles/resnet.dir
+/home/ubuntu/mxnet/cpp-package/example/CMakeFiles/lenet_with_mxdataiter.dir
+/home/ubuntu/mxnet/cpp-package/example/CMakeFiles/alexnet.dir
+/home/ubuntu/mxnet/cpp-package/example/CMakeFiles/edit_cache.dir
+/home/ubuntu/mxnet/cpp-package/example/CMakeFiles/mlp_gpu.dir
+/home/ubuntu/mxnet/cpp-package/example/CMakeFiles/lenet.dir
+/home/ubuntu/mxnet/cpp-package/example/CMakeFiles/cpp_package_deploy_library.dir
+/home/ubuntu/mxnet/cpp-package/example/CMakeFiles/mlp_cpu.dir
+/home/ubuntu/mxnet/cpp-package/example/CMakeFiles/googlenet.dir
+/home/ubuntu/mxnet/cpp-package/example/CMakeFiles/charRNN.dir
+/home/ubuntu/mxnet/cpp-package/example/CMakeFiles/inception_bn.dir
+/home/ubuntu/mxnet/cpp-package/example/CMakeFiles/mlp.dir

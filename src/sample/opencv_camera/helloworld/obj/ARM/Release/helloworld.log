@@ -1,0 +1,8 @@
+﻿  Validating architecture
+  Validating sources
+  Copying sources remotely to '192.168.0.16'
+  Starting remote build
+  Compiling sources:
+  hello.cpp
+  Linking objects
+  helloworld.vcxproj -> C:\Users\sjs21\source\repos\helloworld\helloworld\bin\ARM\Release\helloworld.out

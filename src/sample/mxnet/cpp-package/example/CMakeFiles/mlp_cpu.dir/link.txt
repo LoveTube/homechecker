@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/mlp_cpu.dir/mlp_cpu.o  -o mlp_cpu -rdynamic -lmxnet_static -ldmlc 

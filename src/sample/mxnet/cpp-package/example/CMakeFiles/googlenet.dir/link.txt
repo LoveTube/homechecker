@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/googlenet.dir/googlenet.o  -o googlenet -rdynamic -lmxnet_static -ldmlc 
