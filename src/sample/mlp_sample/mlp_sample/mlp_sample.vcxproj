@@ -67,10 +67,10 @@
     <IncludePath>C:\Users\sjs21\Desktop\headers\mxnet\nnvm;C:\Users\sjs21\Desktop\headers\mxnet\include;C:\Users\sjs21\Desktop\headers\mxnet\dmlc-core;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
-    <IncludePath>C:\Users\sjs21\Desktop\headers\mxnet\nnvm;C:\Users\sjs21\Desktop\headers\mxnet\include;C:\Users\sjs21\Desktop\headers\mxnet\dmlc-core;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\sjs21\source\repos\homekeeper\src\headers\mxnet\include;C:\Users\sjs21\source\repos\homekeeper\src\headers\mxnet\nnvm;C:\Users\sjs21\source\repos\homekeeper\src\headers\mxnet\dmlc-core;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
-    <IncludePath>C:\Users\sjs21\Desktop\headers\mxnet\nnvm;C:\Users\sjs21\Desktop\headers\mxnet\include;C:\Users\sjs21\Desktop\headers\mxnet\dmlc-core;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\sjs21\source\repos\homekeeper\src\headers\mxnet\include;C:\Users\sjs21\source\repos\homekeeper\src\headers\mxnet\nnvm;C:\Users\sjs21\source\repos\homekeeper\src\headers\mxnet\dmlc-core;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemGroup>
     <ClCompile Include="mlp.cpp" />
