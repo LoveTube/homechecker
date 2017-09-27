@@ -88,7 +88,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <ClCompile>
-      <AdditionalOptions>`pkg-config --cflags`</AdditionalOptions>
+      <AdditionalOptions>`pkg-config --cflags opencv`</AdditionalOptions>
       <AdditionalIncludeDirectories>C:\Users\sjs21\Desktop\include\opencv2;C:\Users\sjs21\Desktop\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
@@ -99,7 +99,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <ClCompile>
-      <AdditionalOptions>`pkg-config --cflags`</AdditionalOptions>
+      <AdditionalOptions>`pkg-config --cflags opencv`</AdditionalOptions>
       <AdditionalIncludeDirectories>C:\Users\sjs21\Desktop\include\opencv2;C:\Users\sjs21\Desktop\include\opencv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>

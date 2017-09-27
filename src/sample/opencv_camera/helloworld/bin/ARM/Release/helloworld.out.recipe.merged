@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project>
-  <LocalLibPath>C:\Users\sjs21\source\repos\helloworld\helloworld\bin\ARM\Release\helloworld.out</LocalLibPath>
-  <ObjPaths>C:\Users\sjs21\source\repos\helloworld\helloworld\obj\ARM\Release\</ObjPaths>
+  <LocalLibPath>C:\Users\sjs21\source\repos\homekeeper\src\sample\opencv_camera\helloworld\bin\ARM\Release\helloworld.out</LocalLibPath>
+  <ObjPaths>C:\Users\sjs21\source\repos\homekeeper\src\sample\opencv_camera\helloworld\obj\ARM\Release\</ObjPaths>
   <Configuration>Release</Configuration>
   <Platform>ARM</Platform>
 </Project>
