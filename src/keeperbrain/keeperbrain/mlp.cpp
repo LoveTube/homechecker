@@ -52,12 +52,12 @@ void OutputAccuracy(mx_float* pred, mx_float* target) {
 	cout << "Accuracy: " << right / 128.0 << endl;
 }
 
-void MLP() {
+Symbol generateSymbolNetwork(int nLayers, int nType, int nHidden, int nInput, std::vector<NDArray>& in_args,Context ctx_dev, mx_float* aptr_x, mx_float* aptr_y,int size)
+{
 	auto sym_x = Symbol::Variable("X");
 	auto sym_label = Symbol::Variable("label");
 
-	const int nLayers = 2;
-	vector<int> layerSizes({ 512, 10 });
+	vector<int> layerSizes({ nHidden, nType });
 	vector<Symbol> weights(nLayers);
 	vector<Symbol> biases(nLayers);
 	vector<Symbol> outputs(nLayers);
@@ -73,31 +73,30 @@ void MLP() {
 	}
 	auto sym_out = SoftmaxOutput("softmax", outputs[nLayers - 1], sym_label);
 
-	Context ctx_dev(DeviceType::kCPU, 0);
 
-	NDArray array_x(Shape(128, 28), ctx_dev, false);
-	NDArray array_y(Shape(128), ctx_dev, false);
+	NDArray array_x(Shape(size, nInput), ctx_dev, false);
+	NDArray array_y(Shape(size), ctx_dev, false);
 
-	mx_float* aptr_x = new mx_float[128 * 28];
-	mx_float* aptr_y = new mx_float[128];
+	// init the parameters
+	NDArray array_w_1(Shape(nHidden, nInput), ctx_dev, false);
+	NDArray array_b_1(Shape(nHidden), ctx_dev, false);
+	NDArray array_w_2(Shape(nType, nHidden), ctx_dev, false);
+	NDArray array_b_2(Shape(nType), ctx_dev, false);
+
 
 	// we make the data by hand, in 10 classes, with some pattern
-	for (int i = 0; i < 128; i++) {
-		for (int j = 0; j < 28; j++) {
+	for (int i = 0; i < size; i++) {
+		for (int j = 0; j < nInput; j++) {
 			aptr_x[i * 28 + j] = i % 10 * 1.0f;
 		}
 		aptr_y[i] = i % 10;
 	}
-	array_x.SyncCopyFromCPU(aptr_x, 128 * 28);
+	array_x.SyncCopyFromCPU(aptr_x, size * 28);
 	array_x.WaitToRead();
-	array_y.SyncCopyFromCPU(aptr_y, 128);
+	array_y.SyncCopyFromCPU(aptr_y, size);
 	array_y.WaitToRead();
 
-	// init the parameters
-	NDArray array_w_1(Shape(512, 28), ctx_dev, false);
-	NDArray array_b_1(Shape(512), ctx_dev, false);
-	NDArray array_w_2(Shape(10, 512), ctx_dev, false);
-	NDArray array_b_2(Shape(10), ctx_dev, false);
+
 
 	// the parameters should be initialized in some kind of distribution,
 	// so it learns fast
@@ -107,21 +106,35 @@ void MLP() {
 	array_w_2 = 0.5f;
 	array_b_2 = 0.0f;
 
-	// the grads
-	NDArray array_w_1_g(Shape(512, 28), ctx_dev, false);
-	NDArray array_b_1_g(Shape(512), ctx_dev, false);
-	NDArray array_w_2_g(Shape(10, 512), ctx_dev, false);
-	NDArray array_b_2_g(Shape(10), ctx_dev, false);
-
 	// Bind the symolic network with the ndarray
 	// all the input args
-	std::vector<NDArray> in_args;
+
 	in_args.push_back(array_x);
 	in_args.push_back(array_w_1);
 	in_args.push_back(array_b_1);
 	in_args.push_back(array_w_2);
 	in_args.push_back(array_b_2);
 	in_args.push_back(array_y);
+
+	return sym_out;
+}
+
+
+void MLP() {
+	
+	std::vector<NDArray> in_args;
+	mx_float* aptr_x = new mx_float[128 * 28];
+	mx_float* aptr_y = new mx_float[128];
+	Context ctx_dev(DeviceType::kCPU, 0);
+
+	auto sym_out = generateSymbolNetwork(2, 10, 512, 28, in_args, ctx_dev, aptr_x, aptr_y,128);
+
+	
+	NDArray array_w_1_g(Shape(512, 28), ctx_dev, false);
+	NDArray array_b_1_g(Shape(512), ctx_dev, false);
+	NDArray array_w_2_g(Shape(10, 512), ctx_dev, false);
+	NDArray array_b_2_g(Shape(10), ctx_dev, false);
+	
 	// all the grads
 	std::vector<NDArray> arg_grad_store;
 	arg_grad_store.push_back(NDArray());  // we don't need the grad of the input

@@ -61,7 +61,7 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
-    <IncludePath>C:\opencv\build\include\opencv2\;C:\opencv\build\include\opencv;$(IncludePath)</IncludePath>
+    <IncludePath>$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <IncludePath>C:\opencv\build\include\opencv2\;C:\opencv\build\include\opencv;$(IncludePath)</IncludePath>
@@ -69,6 +69,10 @@
   <ItemGroup>
     <ClCompile Include="camera.cpp" />
     <ClCompile Include="mlp.cpp" />
+    <ClCompile Include="neuron.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="neuron.h" />
   </ItemGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
